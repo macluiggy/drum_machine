@@ -36,7 +36,7 @@ const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) 
 				 name='power'
 				 type='checkbox'
 				 fn={(e) => {
-				 	switchBank(e.target.checked);
+				 	switchBank(e.target.);
 				 	changeClipText(bank ? 'heater kit' : 'smooth piano kit');
 				 }}
 				 toggle={bank} >Bank</InputWithLabel>
