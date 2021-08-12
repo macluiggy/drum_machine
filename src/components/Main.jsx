@@ -3,7 +3,9 @@ import { bankOne, bankTwo } from '../drum-pads/'
 import InputWithLabel from './InputWithLabel'
 import DrumPad from './DrumPad';
 import { connect } from 'react-redux';
-import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
+import { mapStateToProps, mapDispatchToProps } from '../mapToProps/';
+import '../sass/main.scss'
+
 const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) => {
 	const { power, bank, volume } = state.switchStatus
 	const { clipText } = state.clipTextStatus
@@ -26,7 +28,7 @@ const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) 
 				 fn={(e) => switchPower(e.target.checked)}
 				 toggle={power} >Power</InputWithLabel>
 				 <span>{clipText}</span>
-				 <input type="range" onChange={(e) => {
+				 <input type="range" onChange={e => {
 				 	console.log(e.target.value)
 				 	changeClipText(`volume: ${Math.floor(e.target.value)}`)
 				 	switchVolume(e.target.value)
@@ -36,14 +38,16 @@ const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) 
 				 name='power'
 				 type='checkbox'
 				 fn={(e) => {
-				 	switchBank(e.target.);
+				 	switchBank(e.target.checked);
 				 	changeClipText(bank ? 'heater kit' : 'smooth piano kit');
 				 }}
 				 toggle={bank} >Bank</InputWithLabel>
-
 			</div>
 		</div>
 		)
 }
+
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main)

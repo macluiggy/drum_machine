@@ -1,0 +1,20 @@
+#drum-machine {
+  background-color: yellow;
+  border: solid;
+  border-radius: 5em;
+  margin: 1em;
+  padding: 2em;
+  object-fit: cover;
+  .drum_pad_container {
+    border: solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    #drum-pad {
+      width: 100vw;
+      height: 100px;
+      padding: 3em 0;
+    }
+  }
+}
