@@ -46,7 +46,4 @@ const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) 
 		)
 }
 
-
-
-
 export default connect(mapStateToProps, mapDispatchToProps)(Main)
