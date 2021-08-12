@@ -1,6 +1,7 @@
+@import './mixins';
 #drum-machine {
   background-color: yellow;
-  border: solid;
+  @include border(red);
   border-radius: 5em;
   margin: 1em;
   padding: 2em;
@@ -14,6 +15,7 @@
       width: 100vw;
       height: 100px;
       padding: 3em 0;
+     // ques es lo que me pides hacer hijo de tu put amadjdjajkdjadkjfkdajkjkdjkljfdakjkfljkldjkjfkñljdfkljfkjdfjftjrkdjjnfkjhd no se de que hablas caption-side: .drum_pad_container; inset-block-start: .drum_pad_container; jdjdjdjjdj border:  soldldkdkdk;
     }
   }
 }

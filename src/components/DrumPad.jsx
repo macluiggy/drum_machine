@@ -8,8 +8,8 @@ const DrumPad = ({ keyTrigger, id, keyCode, url, power, changeClipText, volume }
 	    	//console.log(id)
 	    	changeClipText(id)
 	    	console.log(sound.volume)
-			sound.volume = volume / 100
-			console.log(sound.volume)
+				sound.volume = volume / 100
+				console.log(sound.volume);
 	    }
 	    return
 	}
